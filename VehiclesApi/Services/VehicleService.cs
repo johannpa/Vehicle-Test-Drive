@@ -47,7 +47,7 @@ namespace VehiclesApi.Services
             vehicleObj.MaxSpeed = vehicle.MaxSpeed;
             vehicleObj.Price = vehicle.Price;
             vehicleObj.Displacement = vehicle.Displacement;
-            await dbContext.AddRangeAsync();
+            await dbContext.SaveChangesAsync();
         }
     }
 }

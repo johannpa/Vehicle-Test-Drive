@@ -16,7 +16,7 @@ namespace CustomersApi.Services
 
         public async Task AddCustomer(Customer customer)
         {
-            var vehicleInDb = await dbContext.Vehicles.FirstOrDefaultAsync(v => v.Id == customer.Id);
+            var vehicleInDb = await dbContext.Vehicles.FirstOrDefaultAsync(v => v.Id == customer.VehicleId);
             if (vehicleInDb == null)
             {
                 await dbContext.Vehicles.AddAsync(customer.Vehicle);
